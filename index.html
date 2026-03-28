@@ -633,6 +633,58 @@
     line-height: 1.65;
   }
 
+  /* Resume download strip */
+  .resume-strip {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 28px 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .resume-strip-text {
+    font-size: 0.82rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .resume-strip-text strong {
+    display: block;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .btn-resume {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.22s;
+    cursor: none;
+    white-space: nowrap;
+    border-radius: 2px;
+  }
+  .btn-resume:hover {
+    background: var(--accent);
+    color: #000;
+    transform: translateY(-2px);
+  }
+  .btn-resume svg { transition: transform 0.2s; }
+  .btn-resume:hover svg { transform: translateY(2px); }
+
 </style>
 </head>
 <body>
@@ -706,7 +758,7 @@
         <p>Outside of coding I stay active by going to in-person tech events and mentorship opportunities whenever I can. Meeting people in the industry and learning from them has been a huge part of how I've grown.</p>
         <div class="statement-actions">
           <a href="#projects" class="btn btn-primary">See my projects ↗</a>
-          <a href="https://linkedin.com/in/zachary-forkash-79553724b" target="_blank" class="btn btn-outline">Connect on LinkedIn</a>
+          <a href="https://linkedin.com/in/zachary-forkash" target="_blank" class="btn btn-outline">Connect on LinkedIn</a>
         </div>
       </div>
     </div>
@@ -781,15 +833,15 @@
 
   <div class="experience-list">
     <div class="exp-item reveal">
-      <div class="exp-date">Oct 2025 — Present</div>
+      <div class="exp-date">Oct 2025 — Feb 2026</div>
       <div class="exp-content">
         <div class="exp-company">Olives &amp; Sheep</div>
-        <div class="exp-role">Software Engineering Intern</div>
+        <div class="exp-role">Software Engineering Intern &nbsp;·&nbsp; Python · YouTube API · Instagram API · Pandas · Excel</div>
         <div class="exp-location">Manhattan, NY</div>
         <ul class="exp-bullets">
-          <li>Built Python scrapers to collect, clean, and structure OSINT-style data from YouTube and Instagram accounts documenting events in Palestine and surrounding regions.</li>
-          <li>Standardized titles, descriptions, dates, and location indicators into structured Excel datasets consumed by a geographic atlas platform.</li>
-          <li>Collaborated with researchers to refine data requirements and ensure source reliability and consistency.</li>
+          <li>Built an automated OSINT pipeline collecting and structuring social media content from YouTube and Instagram APIs — handling pagination, rate limits, and deduplication across thousands of records.</li>
+          <li>Normalized titles, dates, and location indicators into Excel datasets via Pandas; collaborated with researchers to refine schemas and cut manual QA time.</li>
+          <li>Wrote validation scripts to flag missing geolocation fields and inconsistent date formats, improving downstream atlas ingestion reliability.</li>
         </ul>
       </div>
     </div>
@@ -798,12 +850,12 @@
       <div class="exp-date">Jul — Aug 2025</div>
       <div class="exp-content">
         <div class="exp-company">CUNY Tech Prep</div>
-        <div class="exp-role">Software Engineering Intern</div>
+        <div class="exp-role">Software Engineering Intern &nbsp;·&nbsp; React · TypeScript · Vite · Tailwind · Node.js</div>
         <div class="exp-location">Manhattan, NY</div>
         <ul class="exp-bullets">
-          <li>Developed a centralized hackathon hub in React + TypeScript with Vite/Tailwind and Node endpoints — reduced information lookup time by 40%.</li>
-          <li>Implemented schedule, team directory, and announcement feed.</li>
-          <li>Mentored 20+ students on Git, debugging, and API usage.</li>
+          <li>Built a centralized hackathon hub for 20+ students, cutting information lookup time by 40% and replacing scattered communication channels.</li>
+          <li>Implemented schedule, team directory, and announcement feed in React + TypeScript / Tailwind with Node.js endpoints; mentored students on Git and API integration.</li>
+          <li>Conducted code reviews and led debugging sessions, helping students resolve blockers and ship features on a tight two-week timeline.</li>
         </ul>
       </div>
     </div>
@@ -811,13 +863,13 @@
     <div class="exp-item reveal reveal-delay-2">
       <div class="exp-date">Jul — Aug 2024</div>
       <div class="exp-content">
-        <div class="exp-company">Portfolio BL</div>
-        <div class="exp-role">Front-End Intern</div>
+        <div class="exp-company">Portfolio BI</div>
+        <div class="exp-role">Front-End Intern &nbsp;·&nbsp; React · Tailwind · Python · Pandas · Node.js · Express · Vercel</div>
         <div class="exp-location">Brooklyn, NY</div>
         <ul class="exp-bullets">
-          <li>Delivered a production-grade wedding site in React/Tailwind and deployed via Vercel.</li>
-          <li>Cleaned and normalized guest-list data using Python/Pandas.</li>
-          <li>Collaborated on RSVP webhook and admin dashboard using Node/Express.</li>
+          <li>Delivered a production wedding event site end-to-end — from UI build to live deployment — with RSVP and admin functionality serving real guests.</li>
+          <li>Built the client-facing site in React/Tailwind deployed via Vercel; cleaned guest-list data with Python/Pandas and built RSVP webhook and admin dashboard in Node/Express.</li>
+          <li>Coordinated directly with the client through iterative feedback cycles, translating design preferences into UI updates and delivering revisions on a tight event deadline.</li>
         </ul>
       </div>
     </div>
@@ -972,6 +1024,20 @@
       </div>
     </div>
   </div>
+
+  <div class="resume-strip reveal">
+    <div class="resume-strip-text">
+      <strong>Zachary Forkash — Resume</strong>
+      B.S. Computer Systems Analysis · CUNY City Tech · NYC
+    </div>
+    <a href="ZacharyForkashResumeTechUpdated.pdf" download class="btn-resume">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 1v8M7 9l-3-3M7 9l3-3M1 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Download Resume
+    </a>
+  </div>
+
 </section>
 
 <!-- CONTACT -->
@@ -982,7 +1048,7 @@
   <p class="contact-sub reveal">I'm actively looking for full-time roles and open to hearing about anything interesting. Feel free to reach out.</p>
   <div class="contact-links reveal">
     <a href="/cdn-cgi/l/email-protection#d6acb0b7b2b3b9a3a296b1bbb7bfbaf8b5b9bb" class="contact-link">✉ <span class="__cf_email__" data-cfemail="c6bca0a7a2a3a9b3b286a1aba7afaae8a5a9ab">[email&#160;protected]</span></a>
-    <a href="https://linkedin.com/in/zachary-forkash-79553724b" class="contact-link" target="_blank">in LinkedIn</a>
+    <a href="https://linkedin.com/in/zachary-forkash" class="contact-link" target="_blank">in LinkedIn</a>
     <a href="https://github.com/zfadeout" class="contact-link" target="_blank">{ } GitHub</a>
     <a href="tel:9177410989" class="contact-link"># (917) 741-0989</a>
   </div>
